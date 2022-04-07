@@ -1,4 +1,4 @@
-const myURI = 'postgres://nyusngrc:PHjCSzepsQdj0zzRBLPzCojvhYfJHuHU@heffalump.db.elephantsql.com/nyusngrc';
+const myURI = '';
 
 const URI = process.env.PG_URI || myURI;
 
