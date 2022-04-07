@@ -12,30 +12,30 @@ import CreatePost from "./components/CreatePost.jsx";
 export default function Home() {
   const dummyData = [
     {
-      title: "loading",
-      author: "loading",
-      offer: "loading",
-      algorithms: "loading",
-      application: "loading",
-      details: "loading",
+      title: "Google L3 Engineer",
+      author: "Harry",
+      offer: "180k",
+      algorithms: "Valid BST, FizzBuzz, ThreeSum",
+      application: "Codesmith-Style Application",
+      details: "Phone Interview with technical recruiter followed by on-site interview",
       visibility: 'public'
     },
     {
-      title: "loading",
-      author: "loading",
-      offer: "loading",
-      algorithms: "loading",
-      application: "loading",
-      details: "loading",
+      title: "Netflix Senior Software Engineer",
+      author: "Sonny",
+      offer: "500k",
+      algorithms: "Num Islands, MergeSort",
+      application: "Codesmith-Style Application",
+      details: "7 rounds of interviews, combination of algorithm questions and system design questions",
       visibility: 'public'
     },
     {
-      title: "loading",
-      author: "loading",
-      offer: "loading",
-      algorithms: "loading",
-      application: "loading",
-      details: "loading",
+      title: "Co-Star Senior Frontend Engineer",
+      author: "Kristina",
+      offer: "690k",
+      algorithms: "Fizzbuzz",
+      application: "Codesmith-Style Application",
+      details: "On site technical and behavioral interview. Hired on the spot.",
       visibility: 'public'
     },
     {
@@ -61,9 +61,6 @@ export default function Home() {
   const [modalShow, setModalShow] = useState(false);
   const [posts, setPosts] = useState(dummyData);
 
-  useEffect(() => {
-    getPosts()
-  }, []);
 
   const getPosts = async () => {
     const response = await fetch("http://localhost:3000/posts")
@@ -98,7 +95,7 @@ export default function Home() {
             $ {post.offer}
           </Card.Subtitle>
           <time dateTime="2020-05-25">
-						<i class="fas fa-calendar-alt mr-2"></i> {post.created_at?.replace(/T(.*)/, '')}
+						<i className="fas fa-calendar-alt mr-2"></i> {post.created_at?.replace(/T(.*)/, '')}
 					</time>
           <div className="postcard__bar"></div>  
           <div className="cardSize overflow-auto scrollbar scrollbar-morpheus-den">

@@ -26,8 +26,10 @@ export default function Home() {
   
   // const [open, setOpen] = useState(false);
   
+  
   const [modalShow, setModalShow] = useState(false);
   const [posts, setPosts] = useState(dummyData);
+
 
   useEffect(() => {
     getPosts()
@@ -78,7 +80,7 @@ export default function Home() {
           <Card.Subtitle className="text-muted mb-2">
             $ {post.offer}
           </Card.Subtitle>
-          <time datetime="2020-05-25">
+          <time dateTime="2020-05-25">
           <i class="fas fa-calendar-alt mr-2"></i> {post.created_at?.replace(/T(.*)/, '')}
 					</time>
           <div className="postcard__bar"></div>  

@@ -58,7 +58,7 @@ module.exports = {
         static: path.join(__dirname, './public'),
         historyApiFallback: true,
         proxy: {
-            '/db/**': {
+            '/db/': {
                 target: 'http://localhost:3000',
                 secure: false,
                 changeOrigin: true

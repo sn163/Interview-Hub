@@ -26,7 +26,7 @@ postController.getProfilePosts = (req, res, next) => {
   db.query(queryText, values)
     .then( result => {
       res.locals.posts = result.rows;
-      // console.log(res.locals.posts);
+      console.log(res.locals.posts);
       return next();
     })
     .catch( err => {

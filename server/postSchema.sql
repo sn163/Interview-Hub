@@ -1,4 +1,5 @@
-CREATE TABLE public.test (
+
+CREATE TABLE "public.test" (
   "post_id" serial NOT NULL,
   "title" varchar NOT NULL,
   "author" varchar NOT NULL,
@@ -10,11 +11,10 @@ CREATE TABLE public.test (
   "details" varchar,
   "visibility" varchar NOT NULL,
   PRIMARY KEY ("post_id")
-) WITH (
-  OIDS=TRUE
-);
+)
 
-CREATE TABLE public.post (
+
+CREATE TABLE "public.post" (
   "post_id" serial NOT NULL,
   "title" varchar NOT NULL,
   "author" varchar NOT NULL,
@@ -26,24 +26,22 @@ CREATE TABLE public.post (
   "details" varchar,
   "visibility" varchar NOT NULL,
   PRIMARY KEY ("post_id")
-) WITH (
-  OIDS=TRUE
-);
-CREATE TABLE public.user (
+) 
+
+
+CREATE TABLE "public.user" (
   "user_id" serial NOT NULL,
   "username" varchar NOT NULL,
   "email" varchar NOT NULL,
   "log_id" varchar NOT NULL,
   PRIMARY KEY ("user_id")
-) WITH (
-  OIDS=TRUE
-);
+) 
 
-ALTER TABLE public.post ADD CONSTRAINT "post_fk0" FOREIGN KEY ("user_id") REFERENCES  public.user("user_id");
+ALTER TABLE public.post ADD CONSTRAINT "post_fk0" FOREIGN KEY ("user_id") REFERENCES public.user("user_id");
 
 INSERT INTO public.post VALUES (DEFAULT, 'Google L3 Engineer', 'Harry', 1, '180k', DEFAULT, 'Valid BST, FizzBuzz, ThreeSum', 'Codesmith-Style Application', 'Phone Interview with technical recruiter followed by on-site interview', 'public');
-INSERT INTO public.post VALUES (DEFAULT, 'Netflix Senior Software Engineer', 'Sonny', 1, '500k', DEFAULT, 'Num Islands, MergeSort,  ', 'Codesmith-Style Application', '7 rounds of interviews, combination of algorithm questions and system design questions', 'public');
-INSERT INTO public.post VALUES (DEFAULT, 'Co-Star Senior Frontend Engineer', 'Kristina', 1, '690k', DEFAULT, 'Fizzbuzz,', 'Codesmith-Style Application', 'On site technical and behavioral interview. Hired on the spot.', 'public');
+INSERT INTO public.post VALUES (DEFAULT, 'Netflix Senior Software Engineer', 'Sonny', 2, '500k', DEFAULT, 'Num Islands, MergeSort,  ', 'Codesmith-Style Application', '7 rounds of interviews, combination of algorithm questions and system design questions', 'public');
+INSERT INTO public.post VALUES (DEFAULT, 'Co-Star Senior Frontend Engineer', 'Kristina', 3, '690k', DEFAULT, 'Fizzbuzz,', 'Codesmith-Style Application', 'On site technical and behavioral interview. Hired on the spot.', 'public');
 
 
 -- {
@@ -90,3 +88,4 @@ INSERT INTO public.post VALUES (DEFAULT, 'Co-Star Senior Frontend Engineer', 'Kr
 --   "_id": "90020211130024410422898811132722062524488178305167523842",
 --   "isMobile": false
 -- }
+
