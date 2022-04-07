@@ -1,0 +1,15 @@
+.authorFont {
+    font-size: 10px;
+}
+
+#author{
+  margin-left: 10px;
+}
+
+.post{
+  margin-bottom: 10px;
+}
+
+.dark {
+	background: #110f16;
+}
